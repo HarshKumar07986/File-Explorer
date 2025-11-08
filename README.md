@@ -1,93 +1,50 @@
-﻿# File Explorer Project
-
+File Explorer – Capstone Project
 Overview
 
-The File Explorer is a console-based application written in C++17 that allows users to manage files and directories directly from the terminal.
-It provides simple commands to navigate through folders, create or delete files, copy or rename them, search for specific files, and display detailed information such as file size, type, and last modified date.
+This is a console-based File Explorer developed in C++17.
+It allows users to navigate directories, manage files, search for files, and view file information using simple text commands.
+The project demonstrates practical use of the C++ <filesystem> library for handling file operations.
 
-This project demonstrates practical use of the C++ <filesystem> library for file and directory operations, offering a hands-on understanding of how operating systems handle file management tasks.
+Features
 
-Features:
--View all files and folders in the current directory
--Navigate between directories (cd, back)
--Create, delete, rename, and copy files
--Search for files recursively within subdirectories
--Display detailed information about a specific file (type, size, permissions, and last modified time)
--Clean, command-based interface for ease of use
+List files and directories
 
-Commands:
+Navigate through folders (cd, back)
+
+Create, delete, rename, and copy files
+
+Search files recursively
+
+View file details (size, type, permissions, last modified)
+
+Commands
 Command	Description
--list	                  Display files and folders in the current directory
--cd <folder>	          Enter a subdirectory
--back	                  Move up to the parent directory
--create <file>	        Create a new file
--delete <file>	        Delete a file
--rename <old> <new>	    Rename a file
--copy <src> <dest>	    Copy a file
--search <name>	        Search for files by name (recursive)
--info <file>	          Display detailed information about a file
--exit	                  Quit the program
+list	Show files and folders in the current directory
+cd <folder> / back	Change or go back a directory
+create <file> / delete <file>	Manage files
+rename <old> <new> / copy <src> <dest>	Rename or copy files
+search <name>	Find files recursively
+info <file>	Display file information
+exit	Quit the explorer
+How to Compile and Run
+Windows or Linux:
+g++ main.cpp -o explorer -std=c++17
+./explorer
 
-Concepts Used:
--C++17 <filesystem> library for file and directory management
--File I/O operations using streams (ofstream, ifstream)
--Recursive directory traversal for search functionality
--File time and permission handling using <chrono> and fs::perms
--Command parsing for user input handling
-
-Example Usage:
-=== File Explorer ===
-Commands:
-cd <folder>, back, list, exit
-create <file>, delete <file>, rename <old> <new>, copy <src> <dest>
-search <name>, info <file>
-
+Example
 > list
-Directory: C:\Users\adity\Desktop\FileExplorer
------------------------------------------
 main.cpp
 test.txt
 README.md
-.vscode [DIR]
-.git [DIR]
 
-> create data.txt
-File created: data.txt
-
-> info data.txt
---- File Information ---
-Name: data.txt
-Path: C:\Users\adity\Desktop\FileExplorer\data.txt
-Type: File
-Size: 0 bytes
-Last Modified: Sat Nov 08 22:41:18 2025
+> info main.cpp
+Name: main.cpp
+Size: 6081 bytes
+Last Modified: Sat Nov 08 22:08:41 2025
 Permissions: rw-rw-rw-
---------------------------
 
-Technologies Used:
--Language: C++17
--Libraries: <filesystem>, <fstream>, <chrono>
--Compiler: MinGW (Windows) / g++ (Linux or WSL)
--Editor: Visual Studio Code
--Version Control: Git and GitHub
+Author
 
-How to Compile and Run:
-On Windows:
-g++ main.cpp -o explorer -std=c++17
-./explorer
-
-On Linux / WSL:
-g++ main.cpp -o explorer -std=c++17
-./explorer
-
-Project Structure:
-FileExplorer/
-│
-├── main.cpp        # Source code file
-├── README.md       # Project documentation
-└── explorer.exe    # Executable file (after compilation)
-
---Author--
 Aditya Kumar
 Capstone Project – Linux OS Track
 Department of Computer Science and Engineering
